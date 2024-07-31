@@ -1,4 +1,3 @@
-import { Col, Container, Row } from 'react-bootstrap';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import meter1 from '../assets/img/meter1.svg';
@@ -28,10 +27,10 @@ export const Skills = () => {
 
   return (
     <section className="skill" id="skills">
-      <Container>
-        <Row>
-          <Col>
-            <div className="skill-bx">
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <div className="skill-bx wow zoomIn">
               <h2>skills</h2>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -40,7 +39,7 @@ export const Skills = () => {
               <Carousel
                 responsive={responsive}
                 infinite={true}
-                className="skill-slider"
+                className="owl-carousel owl-theme skill-slider"
               >
                 <div className="item">
                   <img src={meter1} alt="Image" />
@@ -60,9 +59,9 @@ export const Skills = () => {
                 </div>
               </Carousel>
             </div>
-          </Col>
-        </Row>
-      </Container>
+          </div>
+        </div>
+      </div>
       <img className="background-image-left" src={colorSharp} />
     </section>
   );
