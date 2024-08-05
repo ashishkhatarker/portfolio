@@ -15,7 +15,7 @@ export const Skills = () => {
       breakpoint: { max: 3000, min: 1024 },
       items: 3,
     },
-    table: {
+    tablet: {
       breakpoint: { max: 1024, min: 464 },
       items: 2,
     },
@@ -31,7 +31,7 @@ export const Skills = () => {
         <div className="row">
           <div className="col-12">
             <div className="skill-bx wow zoomIn">
-              <h2>skills</h2>
+              <h2>Skills</h2>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Necessitatibus deserunt repellat vitae ex, assumenda odio?
@@ -62,7 +62,7 @@ export const Skills = () => {
           </div>
         </div>
       </div>
-      <img className="background-image-left" src={colorSharp} />
+      <img className="background-image-left" src={colorSharp} alt="Image" />
     </section>
   );
 };

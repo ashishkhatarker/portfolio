@@ -1,4 +1,4 @@
-import { Navbar, Container } from 'react-bootstrap';
+import { Navbar, Container, Nav } from 'react-bootstrap';
 import { useEffect, useState } from 'react';
 import logo from '../assets/img/logo.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
@@ -11,7 +11,7 @@ export const NavBar = () => {
 
   useEffect(() => {
     const onScroll = () => {
-      if (window.y > 50) {
+      if (window.scrollY > 50) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -28,7 +28,7 @@ export const NavBar = () => {
   };
 
   return (
-    <Navbar expand="lg" className={scrolled ? 'scrolled' : ''}>
+    <Navbar expand="md" className={scrolled ? 'scrolled' : ''}>
       <Container>
         <Navbar.Brand href="#home">
           <img src={logo} alt="Logo" />
