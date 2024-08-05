@@ -30,7 +30,7 @@ html {
 
 body {
   font-weight: 400;
-  overflow: hidden;
+  overflow-x: hidden;
   position: relative;
   background-color: #121212 !important;
   color: #fff !important;
@@ -72,12 +72,24 @@ button {
   border: 0;
   background-color: transparent;
 }
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
 
 @media (min-width: 1700px) {
   main .container {
     max-width: 100%;
     padding: 0 150px;
   }
+}
+p.success {
+  color: green;
+}
+
+p.danger {
+  color: red;
 }
 
 /* NAVBAR */
@@ -96,7 +108,7 @@ nav.navbar.scrolled {
   background-color: #121212;
 }
 
-nav .navbar a.navbar-brand {
+nav.navbar a.navbar-brand {
   width: 9%;
 }
 nav.navbar .navbar-nav .nav-link.navbar-link {
@@ -116,7 +128,7 @@ span.navbar-text {
   align-items: center;
 }
 
-span.nav-text {
+.social-icon {
   display: inline-block;
   margin-left: 14px;
 }
@@ -132,6 +144,16 @@ span.nav-text {
   justify-content: center;
   line-height: 1;
   border: 1px solid rgba(255, 255, 255, 0.5);
+}
+.social-icon a::before {
+  content: '';
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.3s ease-in-out;
 }
 
 .social-icon a:hover::before {
@@ -207,8 +229,8 @@ nav.navbar .navbar-toggler-icon:focus {
   border-bottom: 2px solid #fff;
 }
 
-nav.navbar .navbar-toggler-icon::after,
-nav.navbar .navbar-toggler-icon::before {
+nav.navbar .navbar-toggler-icon:after,
+nav.navbar .navbar-toggler-icon:before {
   width: 24px;
   position: absolute;
   height: 2px;
@@ -230,7 +252,7 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon:after {
   height: 2px;
 }
 
-nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon::before {
+nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon:before {
   transform: translateY(8px) rotate(-45deg);
   background-color: #fff;
   height: 2px;
@@ -250,7 +272,6 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   background-size: cover;
   background-repeat: no-repeat;
 }
-
 .banner .tagline {
   font-weight: 700;
   letter-spacing: 0.8px;
@@ -265,7 +286,6 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   margin-bottom: 16px;
   display: inline-block;
 }
-
 .banner h1 {
   font-size: 65px;
   font-weight: 700;
@@ -274,7 +294,6 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   margin-bottom: 20px;
   display: block;
 }
-
 .banner p {
   color: #b8b8b8;
   font-size: 18px;
@@ -282,7 +301,6 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   line-height: 1.5em;
   width: 96%;
 }
-
 .banner button {
   color: #fff;
   font-weight: 700;
@@ -292,22 +310,18 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
   display: flex;
   align-items: center;
 }
-
 .banner button svg {
   font-size: 25px;
   margin-left: 10px;
   transition: 0.3s ease-in-out;
   line-height: 1;
 }
-
 .banner button:hover svg {
   margin-left: 25px;
 }
-
 .banner img {
-  animation: updown 3s liner infinite;
+  animation: updown 3s linear infinite;
 }
-
 @keyframes updown {
   0% {
     transform: translateY(-20px);
@@ -319,7 +333,53 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
     transform: translateY(-20px);
   }
 }
-
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
+}
+
+/* SKILLS */
+
+.skill {
+  padding: 0 0 50px 0;
+  position: relative;
+}
+
+.skill-bx {
+  background: #151515;
+  border-radius: 64px;
+  text-align: center;
+  padding: 60px 50px;
+  margin-top: -60px;
+}
+
+.skill h2 {
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.skill p {
+  color: #b8b8b8;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px 0 75px 0;
+}
+
+.skill-slider {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.skill-slider .item img {
+  width: 50%;
+  margin: 0 auto 15px auto;
+}
+
+.background-image-left {
+  top: 28%;
+  position: absolute;
+  bottom: 0;
+  width: 40%;
+  z-index: -4;
 }
