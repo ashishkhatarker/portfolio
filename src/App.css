@@ -463,7 +463,7 @@ nav.navbar .navbar-toggler[aria-expanded='true'] .navbar-toggler-icon {
 }
 .nav-link#projects-tabs-tab-third {
   border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 0 55px 55px0;
+  border-radius: 0 55px 55px 0;
 }
 .proj-imgbx {
   position: relative;
